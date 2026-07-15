@@ -1,0 +1,8 @@
+{
+  "name": "SAM3XDUE",
+  "version": "1.0.0",
+  "description": "SAM Helper Lirbary",
+  "keywords": ["graphics", "dma", "ili9341", "due"],
+  "frameworks": ["arduino"],
+  "platforms": ["atmelsam"]
+}
