@@ -36,7 +36,7 @@ This was not originally intented for use with platformio but I did a really quic
 
 You can include this library by adding this line to ```platformio.ini```:
    
-    ```lib_deps = symlink://PATH_TO_LIB```
+    lib_deps = symlink://PATH_TO_LIB
 
 Then you can ```#include``` whatever files you want.
 
