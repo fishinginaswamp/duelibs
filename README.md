@@ -40,7 +40,7 @@ You can include this library by adding this line to ```platformio.ini```:
 
 Then you can ```#include``` whatever files you want.
 
-- ```dueprinter``` - Make an instance of the ```DuePrinter``` class global. This has two modes for transfers: blocking and non-blocking. Blocking just uses a while loop, similar to ```Serial.print```. Non-blocking is interrupt-driven and requires the user to define the interrupt handler for the peripheral they are using (e.g., UART, USARTx) and place ```DuePrinter_instance.handle()``` within it. The user can set callbacks for when a message has finished sending/receiving with the ```set_read_callback``` and ```set_tx_callback``` functions. One additional message can be queued if one message is currently being sent/received.
+- ```dueprinter``` - Make an instance of the ```DuePrinter``` class global. This has two modes for transfers: blocking and non-blocking. Blocking just uses a while loop, similar to ```Serial.print```. Non-blocking is interrupt-driven and requires the user to define the interrupt handler for the peripheral they are using (e.g., ```void UART_Handler()```, ```void USARTx_Handler()```, etc.) and place ```DuePrinter_instance.handle()``` within it. The user can set callbacks for when a message has finished sending/receiving with the ```set_read_callback``` and ```set_tx_callback``` functions. One additional message can be queued if one message is currently being sent/received.
 
 ## Limitations
 A lot of this is either not tested or not tested thoroughly. It's all "as-is". For the projects that use it, it works well enough.
